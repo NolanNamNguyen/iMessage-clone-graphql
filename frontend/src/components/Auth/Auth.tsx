@@ -1,11 +1,11 @@
-import { useMutation } from "@apollo/client";
-import { Button, Center, Image, Input, Stack, Text } from "@chakra-ui/react";
-import { Session } from "next-auth";
-import { signIn } from "next-auth/react";
-import React, { useState } from "react";
-import toast from "react-hot-toast";
-import UserOperations from "../../graphql/operations/users";
-import { CreateUsernameData, CreateUsernameVariables } from "../../util/types";
+import { useMutation } from '@apollo/client';
+import { Button, Center, Image, Input, Stack, Text } from '@chakra-ui/react';
+import { Session } from 'next-auth';
+import { signIn } from 'next-auth/react';
+import React, { useState } from 'react';
+import toast from 'react-hot-toast';
+import UserOperations from '../../graphql/operations/users';
+import { CreateUsernameData, CreateUsernameVariables } from '../../util/types';
 
 interface AuthProps {
   session: Session | null;
@@ -13,7 +13,7 @@ interface AuthProps {
 }
 
 const Auth: React.FC<AuthProps> = ({ session, reloadSession }) => {
-  const [username, setUsername] = useState("");
+  const [username, setUsername] = useState('');
 
   const [createUsername, { data, loading, error }] = useMutation<
     CreateUsernameData,
@@ -43,15 +43,16 @@ const Auth: React.FC<AuthProps> = ({ session, reloadSession }) => {
         return;
       }
 
-      toast.success("Username successfully created");
+      toast.success('Username successfully created');
 
       /**
        * Reload session to obtain new username
        */
       reloadSession();
     } catch (error) {
-      toast.error("There was an error");
-      console.log("onSubmit error", error);
+      console.log('error', error);
+      toast.error('There was an error');
+      console.log('onSubmit error', error);
     }
   };
 
@@ -81,7 +82,7 @@ const Auth: React.FC<AuthProps> = ({ session, reloadSession }) => {
               friends
             </Text>
             <Button
-              onClick={() => signIn("google")}
+              onClick={() => signIn('google')}
               leftIcon={<Image height="20px" src="/images/googlelogo.png" />}
             >
               Continue with Google

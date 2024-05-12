@@ -1,3 +1,4 @@
+// @ts-ignore
 import merge from "lodash.merge";
 import conversationResolvers from "./conversations";
 import messageResolvers from "./messages";

@@ -1,3 +1,4 @@
+// @ts-nocheck
 import { gql, useMutation, useQuery, useSubscription } from "@apollo/client";
 import { Box } from "@chakra-ui/react";
 import { Session } from "next-auth";

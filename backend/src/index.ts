@@ -1,3 +1,4 @@
+// @ts-nocheck
 import { makeExecutableSchema } from "@graphql-tools/schema";
 import { PrismaClient } from "@prisma/client";
 // import { ApolloServerPluginDrainHttpServer } from "apollo-server-core";

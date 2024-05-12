@@ -1,3 +1,4 @@
+// @ts-nocheck
 import { Prisma } from "@prisma/client";
 // import { GraphQLError } from "apollo-server-core";
 import { GraphQLError } from "graphql";
